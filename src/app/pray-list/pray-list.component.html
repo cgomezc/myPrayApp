@@ -1,0 +1,14 @@
+<h2>Prayers</h2>
+<div *ngFor="let prayer of prayers; index as prayerId">
+  <h3>
+    <a [title]="prayer.name + ' details'" [routerLink]="['/prayers', prayerId]">
+      {{ prayer.name }}
+    </a>
+  </h3>
+  <p *ngIf="prayer.description">Description: {{ prayer.description }}</p>
+  <button  (click)="share()">
+    Share
+  </button>
+
+
+</div>
